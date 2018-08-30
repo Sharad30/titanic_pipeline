@@ -1,0 +1,29 @@
+name: home_credit
+channels:
+    - conda-forge
+dependencies:
+    - python==3.6
+    - numpy==1.15.0
+    - matplotlib==2.1.1
+    - jupyter==1.0.0
+    - scikit-learn==0.19.2
+    - scipy==1.1.0
+    - h5py==2.8.0
+    - seaborn==0.9.0
+    - pandas==0.23.3
+    - psycopg2==2.7.5
+    - sqlalchemy==1.2.10
+    - xlrd
+    - catboost
+    - pip:
+        - dash==0.22.0
+        - dash-renderer==0.13.0
+        - dash-html-components==0.11.0
+        - dash-core-components==0.26.0
+        - plotly
+        - dash-auth==1.0.0
+        - tqdm
+        - xgboost==0.80
+        - sklearn-pandas-1.7.0
+	- lightgbm==2.1.2
+	- catboost==0.9.1.1
