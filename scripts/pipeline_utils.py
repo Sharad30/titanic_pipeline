@@ -42,10 +42,31 @@ class DropColumns(BaseEstimator, TransformerMixin):
 
     def __init__(self, column_names=[]):
         self.column_names = column_names
+        
+    def transform(self, df, y=None):
+        """drop the columns present in self.columns"""
+        self.df = df.drop(self.column_names, axis=1)
+        return self.df 
+
+    def fit(self, df, y=None):
+        """Pass"""
+        return self
+    
+    def get_feature_names(self, df):
+        print(self.df.columns)
+        return self.df.columns
+    
+    
+class Trial(BaseEstimator, TransformerMixin):
+    """Drop the columns in a dataframe """
+
+    def __init__(self, column_names=[]):
+        self.column_names = column_names
 
     def transform(self, df, y=None):
         """drop the columns present in self.columns"""
-        return df.drop(self.column_names, axis=1)
+        print(df.columns.values)
+        return df.columns.values
 
     def fit(self, df, y=None):
         """Pass"""
